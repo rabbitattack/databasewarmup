@@ -5,7 +5,7 @@ exports.up = (knex, Promise) => {
         student.string('lastName')
         student.string('hometown')
         student.string('prevOccupation')
-        student.string('favoriteNum')
+        student.float('favoriteNum')
         student.string('pastime')
     })
 };
