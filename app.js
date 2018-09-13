@@ -1,12 +1,11 @@
 const express = require("express")
 const app = express()
 const bodyParser = require('body-parser')
-const port = process.env.port
+const port = process.env.port || 3000
 const queries = require('./queries')
-const cors = require('cors')
 
 app.use(bodyParser.json())
-app.use(cors())
+
 app.listen(3000, () => console.log('listening on ${port}'));
 
 app.get('/', function (req, res) {
