@@ -1,12 +1,12 @@
 const express = require("express")
 const app = express()
 const bodyParser = require('body-parser')
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 const queries = require('./queries')
 
 app.use(bodyParser.json())
 
-app.listen(3000, () => console.log('listening on ${port}'));
+app.listen(port, () => console.log('listening on ${port}'));
 
 app.get('/', function (req, res) {
     queries.getAll().then(result => { res.send(result) })
