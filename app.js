@@ -6,7 +6,7 @@ const queries = require('./queries')
 const cors = require('cors')
 
 app.use(bodyParser.json())
-app.use(cors)
+app.use(cors())
 app.listen(3000, () => console.log('listening on ${port}'));
 
 app.get('/', function (req, res) {
