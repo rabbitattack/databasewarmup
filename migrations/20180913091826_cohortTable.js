@@ -1,4 +1,4 @@
-exports.up = (knex, Promise) => {
+exports.up = function (knex, Promise) {
     return knex.schema.createTable('cohortTable', (student) => {
         student.increments('id')
         student.string('firstName')

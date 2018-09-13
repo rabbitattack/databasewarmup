@@ -17,7 +17,7 @@ module.exports = {
         return knex.select('id').from('cohortTable').where('id', id)
     },
     createStudent(newStudent) {
-        return knex('students').insert(newStudent)
+        return knex('cohortTable').insert(newStudent)
     }
 }
 
